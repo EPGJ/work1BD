@@ -1,0 +1,334 @@
+{
+	"info": {
+		"_postman_id": "b361a46b-31e6-491a-9857-6f815dd8240b",
+		"name": "work1BDUfes",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "create restaurant",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"restaurante2\",\n    \"photography\": \"default\",\n    \"street\": \"Rua teste\",\n    \"number\": 45,\n    \"postalCode\": \"29141244\",\n    \"district\": \"Boa Sorte\",\n    \"schedules\":[\n        {\n            \"day\": 1,\n            \"openTime\": \"12:10:00\",\n            \"closeTime\": \"23:00:00\"\n        },\n        {\n            \"day\": 3,\n            \"openTime\": \"09:00:00\",\n            \"closeTime\": \"18:00:00\"\n        },\n        {\n            \"day\": 4,\n            \"openTime\": \"09:00:00\",\n            \"closeTime\": \"18:00:00\"\n        },\n        {\n            \"day\": 5,\n            \"openTime\": \"09:00:00\",\n            \"closeTime\": \"18:00:00\"\n        },\n        {\n            \"day\": 6,\n            \"openTime\": \"09:00:00\",\n            \"closeTime\": \"18:00:00\"\n        },\n        {\n            \"day\": 7,\n            \"openTime\": \"11:00:00\",\n            \"closeTime\": \"23:00:00\"\n        }\n    ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/restaurant",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"restaurant"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get restaurants",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/restaurant",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"restaurant"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get restaurant",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/restaurant/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"restaurant",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get all restaurant's products",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/restaurant/allProducts/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"restaurant",
+						"allProducts",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "upload photography restaurant",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"type": "file",
+							"src": "/home/elias/Pictures/Screenshot from 2022-06-14 19-25-33.png"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/restaurant/upload",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"restaurant",
+						"upload"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update restaurant",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"elias ao quadrado\",\n    \"photography\": \"phography51 atualizada\",\n    \"street\": \"Rua teste atualizado\",\n    \"number\": 455,\n    \"postalCode\": \"000000000\",\n    \"district\": \"Boa Sorte atualizado\",\n    \"schedules\":[\n        {\n            \"day\": 1,\n            \"openTime\": \"00:00:00\",\n            \"closeTime\": \"16:00:00\"\n        },\n        {\n            \"day\": 3,\n            \"openTime\": \"12:00:00\",\n            \"closeTime\": \"24:00:00\"\n        },\n        {\n            \"day\": 4,\n            \"openTime\": \"09:00:00\",\n            \"closeTime\": \"18:00:00\"\n        },\n        {\n            \"day\": 5,\n            \"openTime\": \"09:00:00\",\n            \"closeTime\": \"18:00:00\"\n        },\n        {\n            \"day\": 6,\n            \"openTime\": \"09:00:00\",\n            \"closeTime\": \"18:00:00\"\n        },\n        {\n            \"day\": 7,\n            \"openTime\": \"24:00:00\",\n            \"closeTime\": \"23:59:00\"\n        }\n    ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/restaurant/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"restaurant",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create product",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"category_id\": 4,\r\n    \"name\": \"resutante 21\",\r\n    \"price\": 10.50,\r\n    \"restaurant_id\": 1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/product",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"product"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create promotion",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"description\": \"Sexta maluca\",\r\n    \"price\": 1,\r\n    \"isActive\": true,\r\n    \"product_id\": 1,\r\n    \"schedule\": \" Sexta o dia todo.\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/product/promotion",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"product",
+						"promotion"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get products",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/product",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"product"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get product",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/product/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"product",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update product",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"updated product2\",\r\n    \"price\": 0\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/product/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"product",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete product",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/product/13",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"product",
+						"13"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete restaurant",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/restaurant/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"restaurant",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
